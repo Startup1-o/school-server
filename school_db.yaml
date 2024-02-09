@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+  database:
+    image: postgres:16.1
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=school_db
+      - POSTGRES_USER=starguard
+      - POSTGRES_PASSWORD=starguard
+    volumes:
+      - school_db_data:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+volumes:
+  school_db_data:
+    driver: local
