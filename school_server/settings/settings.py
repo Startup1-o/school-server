@@ -22,7 +22,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-1f@boil9ts_r&1+ev)#txrbv#(njb_l9t#wv+4rog$je1+#@o@'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 # MOVED: DEBUG, ALLOWED_HOSTS moved to environment specific files
 
 
@@ -68,9 +67,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'school_server.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-# MOVED: moved to specific environment file
+# MOVED: Database moved to specific environment file
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
